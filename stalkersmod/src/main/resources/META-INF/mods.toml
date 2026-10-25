@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All rights reserved"
+
+[[mods]]
+modId="stalkersmod"
+version="1.0.0"
+displayName="Stalkers Mod"
+description='''Mod de terror con Stalkers y el Tormentator.'''
+
+[[dependencies.stalkersmod]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.stalkersmod]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.stalkersmod]]
+modId="geckolib"
+mandatory=true
+versionRange="[4.4,)"
+ordering="NONE"
+side="BOTH"

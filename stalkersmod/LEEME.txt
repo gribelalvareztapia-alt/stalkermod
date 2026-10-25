@@ -1,0 +1,24 @@
+STALKERS MOD - Forge 1.20.1 (codigo fuente)
+
+COMO COMPILARLO A .JAR
+1. Descarga el Forge MDK 1.20.1 (files.minecraftforge.net) y descomprimelo.
+2. Copia la carpeta "src" de este proyecto dentro del MDK (reemplaza la carpeta src del MDK,
+   pero conserva su build.gradle y gradle.properties; pon mod_id=stalkersmod).
+3. En build.gradle agrega:
+     repositories { maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' } }
+     dependencies { implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.4.9') }
+   (revisa la ultima version 4.x de GeckoLib para 1.20.1)
+4. Ejecuta:  ./gradlew build
+5. El .jar queda en build/libs/. Ponlo en la carpeta mods junto con GeckoLib.
+
+ARCHIVOS QUE TE FALTAN (los haces en Blockbench con el plugin de GeckoLib)
+  assets/stalkersmod/geo/entity/stalker.geo.json
+  assets/stalkersmod/geo/entity/tormentator.geo.json
+  assets/stalkersmod/animations/entity/stalker.animation.json
+  assets/stalkersmod/animations/entity/tormentator.animation.json
+  assets/stalkersmod/textures/entity/stalker.png
+  assets/stalkersmod/textures/entity/tormentator.png
+
+NOMBRES DE ANIMACION (deben llamarse exactamente asi)
+  Stalker:     animation.stalker.idle / walk / attack / death
+  Tormentator: animation.tormentator.idle / walk / attack / death
